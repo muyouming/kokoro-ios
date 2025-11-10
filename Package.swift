@@ -10,16 +10,14 @@ let package = Package(
   ],
   products: [
     .library(
-      name: "KokoroSwift",
-      type: .dynamic,
-      targets: ["KokoroSwift"]
+      name: "KokoroSwift", type: .static, targets: ["KokoroSwift"]
     ),
   ],
   dependencies: [
-    .package(url: "https://github.com/ml-explore/mlx-swift", from: "0.25.6"),
+    .package(url: "https://github.com/muyouming/mlx-swift.git", branch: "static-linking"),
     // .package(url: "https://github.com/mlalma/eSpeakNGSwift", from: "1.0.1"),
-    .package(url: "https://github.com/mlalma/MisakiSwift", from: "1.0.3"),
-    .package(url: "https://github.com/mlalma/MLXUtilsLibrary.git", from: "0.0.5")
+    .package(url: "https://github.com/muyouming/MisakiSwift.git", branch: "static-linking"),
+    .package(url: "https://github.com/muyouming/MLXUtilsLibrary.git", branch: "static-linking")
   ],
   targets: [
     .target(
